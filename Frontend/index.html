@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curtain Control System</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/smartCurtains.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="Images/favicon.ico">
     <link rel="alternate icon" type="image/png" href="Images/favicon.ico">
@@ -400,6 +401,7 @@
 <div class="filler">filler</div>
 <div class="version-display" id="versionDisplay"></div>
 <script src="script.js"></script>
+<script src="smartCurtains.js"></script>
 <div class="menu-button">
     <div class="hamburger">
         <span></span>
@@ -524,10 +526,10 @@
             } else {
                 // User is not logged in - show login button
                 authButton.innerHTML = `
-                    <button class="login-button" disabled style="opacity: 0.6; cursor: not-allowed;">
+                    <a href="/login" class="login-button">
                         <img src="https://learn.microsoft.com/en-us/entra/identity-platform/media/howto-add-branding-in-apps/ms-symbollockup_mssymbol_19.svg" alt="Microsoft Logo">
-                        Sign-in temporarily disabled
-                    </button>
+                        Sign in with Microsoft
+                    </a>
                 `;
                 
                 // Hide logout in sidebar
@@ -570,10 +572,10 @@
             const emptyState = document.getElementById('emptyState');
 
             authButton.innerHTML = `
-                <button class="login-button" disabled style="opacity: 0.6; cursor: not-allowed;">
+                <a href="/login" class="login-button">
                     <img src="https://learn.microsoft.com/en-us/entra/identity-platform/media/howto-add-branding-in-apps/ms-symbollockup_mssymbol_19.svg" alt="Microsoft Logo">
-                    Sign-in temporarily disabled
-                </button>
+                    Sign in with Microsoft
+                </a>
             `;
             
             // Hide logout in sidebar on error
